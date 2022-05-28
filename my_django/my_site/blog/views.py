@@ -13,10 +13,10 @@ def index(request):
 
 def detail(request,pk):
 
-    articles=Article.objects.get(pk=pk)
+    articles=Article.objects.get(pk=slug)
 
     print(articles)
-    #article=get_object_or_404(article,pk=pk)
+    #article=get_object_or_404(article,pk=slug)
     context={'article':articles}
 
     return render(request,"blog/detail.html" ,context)
